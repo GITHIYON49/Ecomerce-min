@@ -1,24 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import { ViewCart,Home } from './pages';
+import { productData } from './data/ProductData';
+import { useState,createContext } from 'react';
+import { BrowserRouter,Routes,Route } from 'react-router-dom';
+import { Navbar} from './components';
+
+export const productContext = createContext();
 
 function App() {
+  const[product,setProduct] = useState(productData);
+  const[cart,setCart]= useState([]);
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <productContext.Provider value={{product,setProduct,cart,setCart}}>
+      <BrowserRouter>
+      <Navbar/> 
+      <Routes>
+        <Route path='/' element={<Home/>} />
+        <Route path='/cart' element={<ViewCart/>}/>
+      </Routes>
+      </BrowserRouter>
+    
+      </productContext.Provider>
   );
 }
 

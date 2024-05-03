@@ -1,0 +1,41 @@
+@import '/src/scss/_variable__';
+@import '/src/scss/_color';
+
+
+.cart-card{
+    @include displayFlex(flex,center,space-around);
+    margin-top: 15px;
+    background-color:$secodnary_light;
+    padding: 10px;
+    &__sub-one{
+        @include displayFlex(flex,center,space-between);
+        gap: 15px;
+        text-transform:uppercase;
+        font-weight: bold;
+        letter-spacing: 1px;
+        &__pic{
+            width: 250px;
+            aspect-ratio: 1/1;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+    }
+
+    &__sub-two{
+        @include displayFlex(flex,center,center);
+        gap: 10px;
+
+        &__btn{
+            height: 40px;
+            aspect-ratio: 1/1;
+            border: none;
+        }
+    }
+
+    &__sub-three{
+        color:$primary;
+
+    }
+   
+
+}

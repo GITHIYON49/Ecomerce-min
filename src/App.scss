@@ -1,0 +1,10 @@
+@import './scss/_fonts__';
+
+body{
+    font-family: $font_family;
+    font-weight: $font_weight;
+    font-style: $font_style;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

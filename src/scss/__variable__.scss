@@ -1,0 +1,8 @@
+
+
+
+@mixin displayFlex($display:flex,$align:center,$justify:center){
+    display:$display;
+    align-items: $align;
+    justify-content: $justify;
+}
