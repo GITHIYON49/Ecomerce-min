@@ -11,7 +11,7 @@
     height: 200px;
   }
   &__detail {
-    @include displayFlex(start, center);
+    @include displayFlex(start, center,row);
     flex-direction: column;
     gap: 5px;
     padding: 15px;

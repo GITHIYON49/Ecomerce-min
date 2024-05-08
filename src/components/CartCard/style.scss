@@ -2,12 +2,12 @@
 @import "/src/scss/_color";
 
 .cart-card {
-  @include displayFlex(center, space-around);
+  @include displayFlex(center, space-around,row);
   margin-top: 15px;
   background-color: $secodnary_light;
   padding: 10px;
   &__sub-one {
-    @include displayFlex(center, space-between);
+    @include displayFlex(center, space-between,row);
     gap: 15px;
     text-transform: uppercase;
     font-weight: bold;
@@ -21,7 +21,7 @@
   }
 
   &__sub-two {
-    @include displayFlex(center, center);
+    @include displayFlex(center, center,row);
     gap: 10px;
 
     &__btn {
@@ -34,4 +34,39 @@
   &__sub-three {
     color: $primary;
   }
+}
+
+@media(max-width:1024px){
+    .cart-card{
+        @include displayFlex(center,space-around,row);
+
+    }
+
+}
+
+@media(max-width:756px){
+    .cart-card{
+        &__sub-one {
+            &__pic {
+              width: 150px;
+            }
+          }
+
+          &__sub-two {
+            display: none;
+          }
+
+    }
+
+}
+
+@media(max-width:756px){
+    .cart-card{
+        &__sub-one {
+            @include displayFlex(center, center,column);
+          }
+
+
+    }
+
 }

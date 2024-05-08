@@ -3,8 +3,7 @@
 
 @media (max-width: 576px) {
   .items-show {
-    @include displayFlex(center, center);
-    flex-direction: column;
+    @include displayFlex(center, center,column);
     position: absolute;
     top: 50%;
     left: 50%;
