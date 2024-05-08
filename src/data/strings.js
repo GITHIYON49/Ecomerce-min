@@ -1,4 +1,4 @@
-export const strings ={
+export const Strings ={
     home:'home',
     cartItem:'cart product',
     add:'add button',

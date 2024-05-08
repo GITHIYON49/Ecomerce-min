@@ -7,9 +7,9 @@ import {
   NoteBook,
   Shoes,
   Tablet,
-} from "../assets/Images";
+} from "../assets/Images/ProductImage";
 
-export const productData = [
+export const ProductData = [
   { id: 1, productName: "Computer", image: Computer, price: "10000" },
   { id: 2, productName: "Dslr", image: Dslr, price: "5000" },
   { id: 3, productName: "Habibi", image: Habibi, price: "300" },

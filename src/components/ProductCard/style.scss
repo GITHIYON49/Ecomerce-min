@@ -1,43 +1,40 @@
-@import '/src/scss/_variable__';
-@import '/src/scss/_color';
+@import "/src/scss/_variable__";
+@import "/src/scss/_color";
 
-.card-container{
-    width: 250px;
-    border-radius: 5px;
-    overflow: hidden;
-    background-color: $secodnary_light;
-    &__pic{
-        width: 100%;
-        height: 200px;
+.card-container {
+  width: 250px;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: $secodnary_light;
+  &__pic {
+    width: 100%;
+    height: 200px;
+  }
+  &__detail {
+    @include displayFlex(start, center);
+    flex-direction: column;
+    gap: 5px;
+    padding: 15px;
+    &__title {
+      text-transform: capitalize;
+      font-weight: bold;
+      margin-top: 5px;
     }
-    &__detail{
-        @include displayFlex(flex,start,center);
-        flex-direction: column;
-        gap:5px;
-        padding:15px;
-        &__title{
-            text-transform: capitalize;
-            font-weight: bold;
-            margin-top: 5px;
-        }
 
-        &__price{
-
-            font-size: 18px;
-
-        }
-        &__btn{
-            padding: 10px 20px;
-            background-color:$primary;
-            border-radius: 5px;
-            border: none;
-            color: white;
-            transition: 0.3s;
-            text-transform: capitalize;
-        }
-        &__btn:hover{
-            background-color:$primary-light;
-        }
-
+    &__price {
+      font-size: 18px;
     }
+    &__btn {
+      padding: 10px 20px;
+      background-color: $primary;
+      border-radius: 5px;
+      border: none;
+      color: white;
+      transition: 0.3s;
+      text-transform: capitalize;
+    }
+    &__btn:hover {
+      background-color: $primary-light;
+    }
+  }
 }
