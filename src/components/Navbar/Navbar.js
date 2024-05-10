@@ -38,7 +38,7 @@ const Navbar = () => {
               <Link className="text-dark " to="/cart">
                 {cartItem}
                 <span className=" bg-secondary  p-2 m-2 rounded-circle text-center text-light fs-6">
-                  {cart.length}
+                  {cart?.length}
                 </span>
               </Link>
             </li>

@@ -15,7 +15,7 @@ const ProductCard = ({ listItems }) => {
   }
 
   function handleRemoveCart() {
-    setCart(cart?.filter((cr) => cr.id !== listItems.id));
+    setCart(cart.filter((cr) => cr?.id !== listItems?.id));
   }
   return (
     <>

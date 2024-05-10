@@ -10,7 +10,7 @@ export const ViewCart = () => {
   const [total, setTotal] = useState(0);
 
   useEffect(() => {
-    const totalAmount = cart.reduce((acc, cartIteam) => {
+    const totalAmount = cart?.reduce((acc, cartIteam) => {
       return acc + parseInt(cartIteam.price);
     }, 0);
 
@@ -24,7 +24,6 @@ export const ViewCart = () => {
           <NoRecordFound className={`text-center fs-2 text-capitalize`} />
         ) : (
           cart?.map((listCart, index) => {
-            console.log(listCart);
             return <CartCard key={index} listCart={listCart} />;
           })
         )}
