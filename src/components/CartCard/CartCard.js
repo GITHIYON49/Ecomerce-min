@@ -10,7 +10,7 @@ function CartCard({ listCart }) {
   const { productName, price, image } = listCart;
 
   function Remove() {
-    setCart(cart.filter((cr) => cr?.id !== listCart?.id));
+    setCart(cart?.filter((cr) => cr?.id !== listCart?.id));
   }
   return (
     <>

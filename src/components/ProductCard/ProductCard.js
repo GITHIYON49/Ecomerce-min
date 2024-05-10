@@ -15,7 +15,7 @@ const ProductCard = ({ listItems }) => {
   }
 
   function handleRemoveCart() {
-    setCart(cart.filter((cr) => cr?.id !== listItems?.id));
+    setCart(cart?.filter((cr) => cr?.id !== listItems?.id));
   }
   return (
     <>
@@ -26,19 +26,11 @@ const ProductCard = ({ listItems }) => {
         <div className="card-container__detail">
           <h5 className="card-container__detail__title">{productName}</h5>
           <p className="card-container__detail__price">₹{price}</p>
-          {cart.includes(listItems) ? (
-            <Button
+          <Button
               className="card-container__detail__btn"
-              btnType={remove}
-              onClick={() => handleRemoveCart()}
+              btnType={cart?.includes(listItems) ? remove  : add  }
+              onClick={() => {cart?.includes(listItems) ?  handleRemoveCart() :   handleAddCart()}}
             />
-          ) : (
-            <Button
-              className="card-container__detail__btn"
-              btnType={add}
-              onClick={() => handleAddCart()}
-            />
-          )}
         </div>
       </div>
     </>

@@ -1,4 +1,4 @@
-import "./style.scss";
+
 
 function Button({ btnType, onClick, className }) {
   return (

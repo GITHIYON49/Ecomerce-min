@@ -11,10 +11,10 @@ export const Home = () => {
           return (
             <ProductCard
               key={i}
-              title={listItems.productName}
+              title={listItems?.productName}
               listItems={listItems}
-              price={listItems.price}
-              pic={listItems.image}
+              price={listItems?.price}
+              pic={listItems?.image}
             />
           );
         })}
